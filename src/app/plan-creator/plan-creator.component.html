@@ -1,0 +1,112 @@
+<mat-accordion>
+     <mat-expansion-panel>
+         <mat-expansion-panel-header>
+             <mat-panel-title>
+                 Add a Flight
+             </mat-panel-title>
+             <mat-panel-description>
+                 Add your flight details
+             </mat-panel-description>
+         </mat-expansion-panel-header>
+
+         <mat-form-field>
+             <mat-label>Airline</mat-label>
+             <input matInput>
+         </mat-form-field>
+
+         <mat-form-field>
+             <mat-label>Departure</mat-label>
+             <input matInput [matDatepicker]="depart">
+             <mat-datepicker-toggle matSuffix [for]="depart"></mat-datepicker-toggle>
+             <mat-datepicker #depart></mat-datepicker>
+         </mat-form-field>
+
+         <mat-form-field>
+            <mat-label>Return</mat-label>
+            <input matInput [matDatepicker]="return">
+            <mat-datepicker-toggle matSuffix [for]="return"></mat-datepicker-toggle>
+            <mat-datepicker #return></mat-datepicker>
+        </mat-form-field>
+     </mat-expansion-panel>
+
+     <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Add a Hotel
+            </mat-panel-title>
+            <mat-panel-description>
+                Add your Hotel details
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+            <mat-label>Hotel</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Check-In</mat-label>
+            <input matInput [matDatepicker]="checkin">
+            <mat-datepicker-toggle matSuffix [for]="checkin"></mat-datepicker-toggle>
+            <mat-datepicker #checkin></mat-datepicker>
+        </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Add a custom event
+            </mat-panel-title>
+            <mat-panel-description>
+                Add event details
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+            <mat-label>Name of event</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="eventDate">
+            <mat-datepicker-toggle matSuffix [for]="eventDate"></mat-datepicker-toggle>
+            <mat-datepicker #eventDate></mat-datepicker>
+        </mat-form-field>
+    </mat-expansion-panel>
+</mat-accordion>
+
+<hr>
+
+<div>
+    <mat-card>
+        <mat-card-title>
+            Departure
+        </mat-card-title>
+        <mat-card-subtitle>
+            01/01/2021
+        </mat-card-subtitle>
+    </mat-card>
+</div>
+
+
+<div>
+    <mat-card>
+        <mat-card-title>
+            Return
+        </mat-card-title>
+        <mat-card-subtitle>
+            02/01/2021
+        </mat-card-subtitle>
+    </mat-card>
+</div>
