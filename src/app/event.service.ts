@@ -4,13 +4,13 @@ import { Injectable } from "@angular/core";
 export class EventService {
     private plan = {
         name: '',
-        start: '',
-        end: '',
+        start: new Date(),
+        end: new Date(),
         events: []
     }
 
 
-    createPlan(name: string, start, end){
+    createPlan(name: string, start:Date , end: Date){
         this.plan.name = name;
         this.plan.start = start;
         this.plan.end = end;
@@ -32,8 +32,9 @@ export class EventService {
             type: 'hotel',
             data: [
                 hotel,
+                checkin,
                 address,
-                checkin
+                
             ]
         })
     }
@@ -47,6 +48,10 @@ export class EventService {
                 address
             ]
         })
+    }
+
+    getPlan(){
+        return this.plan;
     }
 }
 
