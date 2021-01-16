@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
     MatExpansionModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

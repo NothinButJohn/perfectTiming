@@ -1,32 +1,34 @@
 <mat-accordion>
      <mat-expansion-panel>
-         <mat-expansion-panel-header>
-             <mat-panel-title>
-                 Add a Flight
-             </mat-panel-title>
-             <mat-panel-description>
-                 Add your flight details
-             </mat-panel-description>
-         </mat-expansion-panel-header>
+         <form [formGroup]="flightForm">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Add a Flight
+                </mat-panel-title>
+                <mat-panel-description>
+                    Add your flight details
+                </mat-panel-description>
+            </mat-expansion-panel-header>
 
-         <mat-form-field>
-             <mat-label>Airline</mat-label>
-             <input matInput>
-         </mat-form-field>
+            <mat-form-field>
+                <mat-label>Airline</mat-label>
+                <input matInput>
+            </mat-form-field>
 
-         <mat-form-field>
-             <mat-label>Departure</mat-label>
-             <input matInput [matDatepicker]="depart">
-             <mat-datepicker-toggle matSuffix [for]="depart"></mat-datepicker-toggle>
-             <mat-datepicker #depart></mat-datepicker>
-         </mat-form-field>
+            <mat-form-field>
+                <mat-label>Departure</mat-label>
+                <input matInput [matDatepicker]="depart">
+                <mat-datepicker-toggle matSuffix [for]="depart"></mat-datepicker-toggle>
+                <mat-datepicker #depart></mat-datepicker>
+            </mat-form-field>
 
-         <mat-form-field>
-            <mat-label>Return</mat-label>
-            <input matInput [matDatepicker]="return">
-            <mat-datepicker-toggle matSuffix [for]="return"></mat-datepicker-toggle>
-            <mat-datepicker #return></mat-datepicker>
-        </mat-form-field>
+            <mat-form-field>
+                <mat-label>Return</mat-label>
+                <input matInput [matDatepicker]="return">
+                <mat-datepicker-toggle matSuffix [for]="return"></mat-datepicker-toggle>
+                <mat-datepicker #return></mat-datepicker>
+            </mat-form-field>
+        </form>
      </mat-expansion-panel>
 
      <mat-expansion-panel>
