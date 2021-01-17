@@ -1,6 +1,45 @@
-<mat-toolbar color="primary">
+<!-- <mat-toolbar color="primary">
   <mat-icon>local_fire_department</mat-icon>
   <span>Travella</span>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+Personal Information
+
+<div class="pi">
+  <form>
+    <label for="firstName">First Name</label>
+    <input [formControl]="formGroup.controls.firstName" class="pi--fn__input">
+    <label for="middleInitial">middle initial</label>
+    <input [formControl]="formGroup.controls.middleInitial" class="pi--mi__input">
+    <label for="lastName">Last Name</label>
+    <input [formControl]="formGroup.controls.lastName" class="pi--ln__input">
+    <label for="emailAddress">Email Address</label>
+    <input [formControl]="formGroup.controls.emailAddress" class="pi--email__input">
+    <label for="phoneNumber">Phone Number</label>
+    <input [formControl]="formGroup.controls.phoneNumber" class="pi--phone__input">
+  </form>
+</div>
+
+
+<hr>
+Work Experience
+<hr>
+<ng-container class="work" *ngFor="let work of workHistory; let i = index"> 
+  <button class="work__remove" (click)="removeWork(i)">x</button>
+  <label for="businessName" class="wn__input">Business Name</label>
+  <input [formControl]="" class="wn__input">
+  <label for="businessName">Title</label>
+  <input [formControl]="" class="title__input">
+  <label for="businessName">From</label>
+  <input [formControl]="" type="date" class="from__input">
+  <ng-template *ngIf="current; else end"></ng-template>
+  <ng-template #end class="to__input">
+    <label for="businessName">To</label>
+    <input [formControl]="" type="date">
+  </ng-template>
+  <input type="checkbox"  (click)="current = !current"> current
+  <br>
+</ng-container>
+<button (click)="addWork()">Add</button>

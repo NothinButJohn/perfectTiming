@@ -1,0 +1,42 @@
+.pi{
+}
+
+.pi--fn__input{
+    display: flex;
+    flex-direction: row;
+}
+.pi--mi__input{
+    display: flex;
+    flex-direction: row;
+}
+.pi--ln__input{
+    display: flex;
+}
+.pi--email__input{
+    display: flex;
+}
+.pi--phone__input{
+    display: flex;
+}
+
+.wn__input{
+    display: flex;
+}
+.title__input{
+    display: flex;
+}
+.from__input{
+    display: flex;
+}
+.to__input{
+    display: flex;
+}
+
+.work__remove{
+    display: flex;
+    margin: auto;
+}
+
+.wn__input{
+    display: flex;
+}
