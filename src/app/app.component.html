@@ -91,3 +91,51 @@ Education
 </div>
 
 
+<hr>
+Volunteer
+<hr>
+
+<div *ngFor="let work of workHistory; let i = index" (click)="onSelected(work, i)">
+  <button class="work__remove" (click)="removeWork(i)">x</button>
+  {{work.businessName}}
+  {{work.title}}
+  Started on {{work.start}} through {{work.end}}
+</div>
+
+<div [formGroup]="educationForm">
+  <label for="educationName" class="wn__input">School</label>
+  <input formControlName="eduName" class="wn__input">
+  <label for="degreeType">Degree Type</label>
+  <input formControlName="degreeType" class="title__input">
+  <label for="major">Major</label>
+  <input formControlName="major" class="title__input">
+  <label for="start">Start</label>
+  <input formControlName="start" type="date" class="from__input">
+  <ng-template *ngIf="current; else end"></ng-template>
+  <ng-template #end class="to__input">
+    <label for="end">End</label>
+    <input formControlName="end" type="date">
+  </ng-template>
+  <input type="checkbox"  (click)="current = !current"> current
+  <div *ngIf="!edit; else update">
+    <button (click)="addEdu()">Add</button>
+  </div>
+  <ng-template #update>
+    <button (click)="updateEdu()">Update</button>
+  </ng-template>
+</div>
+
+
+<hr>
+Skills
+<hr>
+<hr>
+Publications
+<hr>
+<hr>
+Awards
+<hr>
+<hr>
+Social Media
+<hr>
+
